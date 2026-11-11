@@ -1,0 +1,13 @@
+#entry:has(.infusion-form){width:min(840px,96vw);max-height:92dvh;padding:0}
+#entry:has(.infusion-form)>header{position:sticky;top:0;background:white;border-bottom:1px solid #e1ebe4;padding:16px 22px;z-index:2}
+.infusion-form .capture-section{margin:0;padding:19px 22px;border-bottom:1px solid #e5ede8}
+.capture-section h3{margin:0 0 12px;font-size:16px;letter-spacing:-.2px}
+.capture-section .identity{margin:12px 0}
+.capture-section details{border-top:1px solid #e4ede6}
+.capture-section summary{cursor:pointer;padding:9px 1px;color:#456550;font-size:13px;font-weight:600}
+.capture-section details>.fields{padding:2px 0 13px}
+.capture-section .record-source{background:#f7fbf8}
+.infusion-form .capture-foot{position:sticky;bottom:0;background:white;border-top:1px solid #e1ebe4;padding:10px 22px}
+.capture-foot .actions{margin:0}.capture-foot .error:not(:empty){margin:0 0 8px}
+.record-actions{display:flex;flex-wrap:wrap;gap:8px}
+@media(max-width:600px){#entry:has(.infusion-form){width:96vw}.infusion-form .capture-section{padding:16px}.infusion-form .capture-foot{padding:10px 16px}}

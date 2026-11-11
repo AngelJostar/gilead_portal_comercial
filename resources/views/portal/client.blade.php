@@ -1,0 +1,10 @@
+<!doctype html><html lang="es-MX"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portal del centro de infusión</title><meta name="csrf-token" content="{{ csrf_token() }}"><script src="/portal/laravel.js"></script><script defer src="/vendor/alpine.min.js"></script><script>window.portalAccount=@json($portalAccount);</script><link rel="stylesheet" href="./pedidos/portal.css"><link rel="stylesheet" href="./pedidos/estilo.css"><script defer src="./pedidos/detalle.js"></script><link rel="stylesheet" href="./cliente/ficha.css"><script defer src="./cliente/campos.js"></script><script defer src="./cliente/ficha.js"></script><script defer src="./cliente/panel.js"></script><script defer src="./portal/session.js"></script></head>
+<body x-data><header class="top"><span class="brand"><i aria-hidden="true"></i>gilead</span><span class="profile">Portal del centro</span><div class="session"><span id="account"></span><button id="logout">Cerrar sesión</button></div></header>
+<main><section class="head"><div><small>Centro de infusión</small><h1 id="center">Mi centro</h1></div><button class="primary" id="newTreatment">Nueva infusión</button></section>
+<nav aria-label="Secciones del cliente"><a href="#tratamientos">Tratamientos</a><a href="#pacientes">Pacientes</a><a href="#medicos">Médicos</a><a href="#distribuidores">Distribuidores</a></nav>
+<section class="panel"><header class="panel-head"><div><h2 id="viewTitle">Tratamientos</h2><span id="count"></span></div><div class="panel-actions"><button id="reload">Actualizar</button><button id="addRecord" hidden></button></div></header>
+<div class="search"><input type="search" id="search" placeholder="Buscar en esta vista" aria-label="Buscar en esta vista"></div>
+<div id="content" class="scroll"></div></section><footer>Entorno de demostración · Usa folios y datos ficticios.</footer></main>
+<dialog id="entry" aria-labelledby="dialogTitle"><header><h2 id="dialogTitle"></h2><button class="close" type="button" aria-label="Cerrar">×</button></header><div id="dialogContent"></div></dialog>
+<div id="feedback" role="status"></div></body></html>

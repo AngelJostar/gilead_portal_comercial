@@ -1,0 +1,17 @@
+:root{font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172d24;background:#f6f9f6}
+*{box-sizing:border-box}body{margin:0}
+.entry-screen{min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:28px 20px;background:radial-gradient(ellipse at 84% 12%,#e4f5ea,transparent 42%),#f7faf7}
+.entry-wide{width:min(980px,100%)}.entry-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.entry-brand{display:flex;align-items:center;gap:10px;margin-bottom:26px}.entry-brand b{font:bold 19px Georgia;display:block}.entry-brand small{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#64786a}
+.mark{position:relative;width:36px;height:36px;border:1px solid #d8eee0;border-radius:12px;color:transparent;background:#eaf7ed}
+.mark::before,.mark::after{content:"";position:absolute;top:4px;left:7px;width:12px;height:26px;border-radius:100% 0 100% 0;background:#62c591;transform:rotate(-37deg)}
+.mark::after{left:16px;background:#9ddcb5;transform:rotate(37deg)}
+h1{margin:0;font-size:25px;letter-spacing:-.6px;color:#183c2b}.entry-sub,.module-card p,.entry-foot{color:#64766a;font-size:13px}.entry-sub{margin:4px 0 0}
+.user-chip{background:white;border:1px solid #e1eee5;color:#47745a;font-size:11px;padding:6px 10px;border-radius:20px;white-space:nowrap}
+.module-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:24px}
+.module-card{padding:22px;background:white;border:1px solid #e5ede7;border-radius:18px;color:inherit;text-decoration:none;box-shadow:0 8px 28px #194b300d;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.module-card:hover,.module-card:focus-visible{border-color:#9cd2b0;background:#fcfefc}
+.module-icon{display:grid;place-items:center;background:#eaf7ef;color:#16885b;border-radius:12px;width:42px;height:42px;font-size:20px;margin-bottom:10px}
+.module-card h2{font-size:17px;margin:0}.module-card p{margin:0 0 10px}.module-open{margin-top:auto;font-weight:600;color:#16885b;font-size:12px}
+.entry-foot{margin:18px 0 12px;font-size:11px}.module-back{background:white;color:#365442;border:1px solid #dce9df;border-radius:10px;padding:9px 14px;font-weight:600;line-height:1.4;font-family:inherit;font-size:12px;cursor:pointer}
+@media(max-width:700px){.module-grid{grid-template-columns:1fr;gap:10px}.module-card{padding:15px 18px;gap:3px}.module-icon{margin-bottom:4px}.entry-screen{padding:20px 14px}.module-card p{margin-bottom:5px}}

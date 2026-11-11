@@ -1,0 +1,65 @@
+/* Shared module chrome. Module-specific tables and forms retain their own styles. */
+body[data-module] {background:#f6f9f6;color:#172d24;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body[data-module] main.main {margin:0;width:100%;min-width:0;overflow:visible}
+body[data-module] main.shell, body[data-module] .main>.content {
+  width:100%;max-width:1500px;min-width:0;margin:0 auto;padding:30px;box-sizing:border-box;
+}
+body[data-module] .mast {padding:0;align-items:flex-end;margin-bottom:20px}
+body[data-module] .mast .crumb {display:none}
+body[data-module] .mast h1 {font:700 26px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.6px;color:#183c2b}
+body[data-module] .mast p {color:#64756a;font-size:13px}
+body[data-module] .primary {background:#16885b;border-color:#16885b;color:white;border-radius:11px}
+body[data-module] .box, body[data-module] .panel, body[data-module] .metricrow, body[data-module] .metrics {
+  border-color:#e5ede7;border-radius:17px;box-shadow:0 8px 28px #194b300d;
+}
+body[data-module] .mast[hidden], body[data-module] .context[hidden],body.gate-mode .portal-header {display:none}
+.portal-header {
+  position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;min-height:68px;
+  padding:10px 30px;background:#ffffffed;border-bottom:1px solid #e5ede7;backdrop-filter:blur(14px);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+.shell-control,.shell-help,.menu-close {
+  line-height:1.2;font-family:inherit;font-size:12px;font-weight:600;color:#365442;
+  background:white;border:1px solid #e0eae3;border-radius:10px;min-height:38px;padding:0 12px;
+  text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;cursor:pointer;
+}
+.shell-control:hover,.shell-help:hover,.menu-close:hover {background:#edf7f0}
+.hamburger {height:12px;width:15px;border-block:1.8px solid currentColor;display:grid;align-items:center}
+.hamburger::before {content:"";height:1.8px;background:currentColor}
+.shell-path {display:flex;align-items:center;gap:8px;min-width:0;font-size:12px;color:#65776c}
+.shell-path strong {color:#223d2c}.shell-slash {color:#a9b6ad}
+#moduleHomeBtn {margin-inline-start:auto;flex-shrink:0}
+.shell-demo {background:#edf8f0;color:#267047;padding:6px 10px;border-radius:20px;font-size:10px;white-space:nowrap}
+.portal-header>.account-wrap {position:relative}
+.shell-avatar,.menu-profile>b {display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:100%;background:#e4f4e9;color:#16764d;font-size:13px;font-weight:700}
+.shell-account {position:absolute;right:0;top:44px;background:white;width:min(235px,90vw);padding:14px;border:1px solid #e5ede7;border-radius:12px;box-shadow:0 16px 40px #183d271c;font-size:13px}
+.shell-account[hidden] {display:none}
+.shell-account small,.menu-profile small,.menu-brand small {display:block;font-size:11px;color:#64786a;margin-top:4px}
+.shell-account button {width:100%;background:white;color:#294b36;border:0;border-top:1px solid #e5ede7;text-align:left;margin-top:10px;padding:10px 0 0;font-family:inherit}
+#portal-menu {
+  position:fixed;inset:0 auto 0 0;margin:0;width:min(280px,87vw);height:100dvh;max-height:none;
+  max-width:none;padding:18px 14px;box-sizing:border-box;border:0;border-right:1px solid #e3ece6;border-radius:0;
+  background:white;color:#19382a;box-shadow:0 16px 50px #12251920;overflow:auto;
+}
+#portal-menu[open] {display:flex;flex-direction:column}
+#portal-menu::backdrop {background:#172f223e}
+.menu-brand,.menu-profile {display:flex;align-items:center;gap:10px;padding:5px 8px}
+.menu-brand strong {font:700 20px Georgia,serif}.menu-brand small {text-transform:uppercase;letter-spacing:1px;font-size:9px}
+.menu-close {min-width:34px;min-height:34px;margin-left:auto;font-size:19px}
+.menu-leaf {display:inline-block;width:35px;height:35px;border-radius:11px;background:#eaf8ef;position:relative;border:1px solid #d7ebdd}
+.menu-leaf::before,.menu-leaf::after {content:"";position:absolute;top:4px;left:7px;width:11px;height:24px;border-radius:100% 0 100% 0;background:#59c78d;transform:rotate(-35deg)}
+.menu-leaf::after {left:15px;transform:rotate(35deg);background:#8bd6ac}
+#menu-title {font-size:12px;font-weight:600;color:#687d6f;margin:25px 9px 10px}
+#portal-menu nav {display:grid;gap:4px;white-space:normal}
+#portal-menu nav :is(a,button) {min-width:0;display:flex;align-items:center;gap:10px;background:none;border:0;border-radius:10px;padding:12px;color:#455f4e;font:600 13px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-align:left;text-decoration:none;cursor:pointer}
+#portal-menu nav svg {width:17px;height:17px}
+#portal-menu nav :is(a,button):hover,#portal-menu nav .active {background:#edf7f0;color:#16754c}
+#portal-menu nav .active {box-shadow:inset 3px 0 #3cb376}
+.menu-profile {border-top:1px solid #e5ede7;margin-top:auto;padding-top:16px;font-size:12px;font-weight:600}
+@media(max-width:720px){
+  body[data-module] main.shell,body[data-module] .main>.content {padding:20px 14px 35px}
+  .portal-header {min-height:58px;padding:8px 14px;gap:7px}.shell-path strong,.shell-slash,.shell-demo {display:none}
+  .shell-help {display:none}.shell-path {font-size:11px}
+}
+@media(max-width:380px){.shell-control {padding-inline:8px}.shell-control .hamburger+span {display:none}}
+#moduleHomeBtn .modules-icon{width:16px;height:16px;flex:none}
